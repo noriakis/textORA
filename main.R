@@ -11,6 +11,7 @@ additionalRemove <- NA
 
 ## Using GeneSummary
 tb <- loadGeneSummary()
+tb <- tb[!duplicated(tb$Gene_ID),]
 
 ## Already performed rda with high frequency words
 allDocsPre <- VCorpus(VectorSource(tb$Gene_summary))
